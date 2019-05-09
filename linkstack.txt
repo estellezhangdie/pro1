@@ -1,0 +1,44 @@
+"""实现结点"""
+class Node():
+    def __init__(self,val,next=None):
+        self.val=val
+        self.next=next
+"""实现栈"""
+class Stack():
+    def __init__(self):
+        self.head=None
+        self.N=0#初始化栈的长度为0
+         #"""实现判断栈是否为空"""
+    def isEmpty(self):
+      return self.N==0
+        #"""实现读取栈的长度"""
+    def size(self):
+        return self.N
+        #"""进栈"""
+    def push(self, item):
+        rear=self.head
+        self.head=Node(item)
+        self.head.item=item
+        self.head.next=rear
+        self.N+=1
+       #"""出栈""" 
+    def pop(self):
+        if  self.N==0:
+            print("the stack'length is zero")
+        else:
+            item=self.head.val
+            self.head=self.head.next
+            return item
+ 
+    def top(self):
+        if self.N==0:
+            print("the stack'length is zero")
+        else: return self.first.val
+ 
+ 
+my_stack = Stack()
+my_stack.pop()
+my_stack.push('h')
+my_stack.push('a')
+print(my_stack.pop())
+print(my_stack.pop())
