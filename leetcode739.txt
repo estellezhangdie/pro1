@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution(object)：
     def dailyTemperatures(self, T):
         """
         :type T: List[int]
